@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' !important;
+}
+
+#profile {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(148, 200, 233, 1) 100%);
+    height: 50vh;
+    margin-bottom: 170px;
+}
+
+.container-profile {
+    position: relative;
+}
+
+.profile-description {
+    position: absolute;
+    top: 320px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 250px;
+    border: 5px solid white;
+    border-radius: 50%;
+    grid-row: 1 / span 2;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: end;
+    margin: 0;
+
+    text-shadow: 2px 2px 5px white;
+}
+
+.profile-info {
+    align-self: end;
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1rem;
+    margin: 20px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    #profile {
+        margin-bottom: 250px;
+    }
+
+    .profile-description {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 0;
+    }
+
+    .profile-img {
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .profile-name {
+        align-self: start;
+        grid-column: 1;
+        grid-row: 2 / 3;
+        align-self: center;
+    }
+
+    .profile-info {
+        grid-column: 1;
+        grid-row: 3 / 4;
+        margin: 0;
+    }
+}
+
+/************ Navbar-stories ************/
+.nav-stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+/* Individual story container */
+.links-stories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stories {
+    width: 60px;
+    height: 60px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Space between the icon and the text */
+}
+
+.stories a {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none; /* Remove underline from links */
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+
+/************ Project section ************/
+
+.img-container {
+    width: 100%;
+    padding-bottom: 100%; /* Maintain aspect ratio 1:1 */
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transform: translate(-50%, -50%);
+}
+
+/* Navbar stories section */
+.nav-stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    justify-items: center;
+    gap: 20px;
+    text-align: center; /* Align text under the stories */
+}
+
+
+/* ************ About-me section ************ */
+.about-me-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    margin-top: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.social-media a {
+    font-size: 2rem;
+    color: black;
+}
+
+/* ************ Contact-me section ************ */
+#contact-me {
+    height: 70vh;
+}
+
+.contact-me-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(345deg, #b9f6ff 0, #6c90d8 0%, #2a364e 100%);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.info-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.5px 0.5px 3px white;
+}
+
+.info-text {
+    color: white;
+}
+
+.info-btn {
+    font-size: 1.5rem;
+    padding: 5px 70px;
+    color: white;
+    text-shadow: 0.5px 0.5px 3px white;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.info-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.info-img {
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        display: block;
+    }
+    
+    .info-btn {
+        padding: 10px 20px;
+    }
+}
