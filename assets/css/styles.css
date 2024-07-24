@@ -9,15 +9,12 @@ body {
     background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(148, 200, 233, 1) 100%);
     height: 50vh;
     margin-bottom: 170px;
-}
-
-.container-profile {
     position: relative;
 }
 
 .profile-description {
     position: absolute;
-    top: 320px;
+    top: 65%;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
